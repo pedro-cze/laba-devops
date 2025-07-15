@@ -28,4 +28,4 @@ jobs:
       - name: Gradle Build
         run: ./gradlew build
       - name: Test
-        run: ./gradlew test --info --no-build-cache
+        run: ./gradlew test --no-build-cache
