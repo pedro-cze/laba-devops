@@ -26,4 +26,6 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Gradle Build
-        run: ./gradlew build --no-build-cache
+        run: ./gradlew build
+      - name: Test
+        run: ./gradlew test --no-build-cache
