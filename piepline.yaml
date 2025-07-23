@@ -1,0 +1,24 @@
+name: Pipeline Example
+run-name: example-pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+      - name: Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
+          gradle-version: '7.0'
+      - name: Run tests
+        run: ./gradlew test --no-build-cache
