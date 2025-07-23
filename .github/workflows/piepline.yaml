@@ -25,5 +25,5 @@ jobs:
           gradle-version: '8.4'
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-      - name: Run tests
-        run: ./gradlew test --no-build-cache
+      - name: Gradle Build
+        run: ./gradlew build --no-build-cache
