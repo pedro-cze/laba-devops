@@ -15,6 +15,8 @@ dependencies {
 }
 
 tasks.test {
+    println("Running tests")
+
     useJUnitPlatform()
     testLogging {
         events("passed", "skipped", "failed")

@@ -1,0 +1,22 @@
+# Gradle build výstupy
+build/*
+!build/libs/
+!build/libs/*.jar
+.gradle/
+
+# IDE a systémové soubory
+.idea/
+*.iml
+.vscode/
+.DS_Store
+*.class
+*.log
+
+# Git a CI/CD
+.git
+.gitignore
+.github/
+.gitlab-ci.yml
+
+# Docker
+Dockerfile.*
