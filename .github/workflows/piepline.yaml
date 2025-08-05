@@ -1,4 +1,4 @@
-name: Pipeline Example
+name: Project & Docker Image build 
 run-name: example-pipeline
 on:
   push:
