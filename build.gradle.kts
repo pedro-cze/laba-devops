@@ -1,5 +1,10 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    application
+}
+
+application {
+    mainClass.set("MainKt")
 }
 
 repositories {
@@ -12,6 +17,12 @@ dependencies {
     // test dependencies
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "MainKt"
+    }
 }
 
 tasks.test {
